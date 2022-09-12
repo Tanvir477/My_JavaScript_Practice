@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Guess A Number between 1 to 10</h1>
+    <input type="text" id="gNumber">
+    <Button id="click">JAKALAKA</Button>
+    <h3 id="result" ></h3>
+    <button id="reload">Reload</button>
+
+
+
+
+ <script>
+    
+
+    
+        var randomNumber = Math.ceil(Math.random()*10);
+        console.log(randomNumber);
+
+       
+    
+
+    const btn = document.getElementById("click");
+    btn.addEventListener('click', function(){
+        var guessNumber = document.getElementById('gNumber').value;
+        console.log(guessNumber);
+
+        if( guessNumber == randomNumber){
+            document.getElementById("result").innerHTML = "GOOD WORK YOU WIN";
+        }
+        else{
+            document.getElementById("result").innerHTML = "Not matched";
+            
+        } 
+        
+    })
+
+    let windowReload = document.getElementById("reload");
+    windowReload.addEventListener('click', function(){
+        window.location.reload(true);
+    })
+
+    
+    
+
+
+
+ </script>   
+</body>
+</html>
